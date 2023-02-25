@@ -676,9 +676,10 @@ transition-timing-function: var(--main-timing-function);
 background: rgba(49, 208, 170, 1);
 }
 
-.subscribe {
-display: block;
-margin-bottom: 16px;   
+
+.user-email {
+ display: block;
+margin-bottom: 16px;
 }
 
 .form {
@@ -693,6 +694,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 background-color: var(--main-title-color);
 border-radius: 4px;
 padding: 8px 16px;
+color: var(--main-background-color);
 } 
 
 .button-subscribe {
@@ -703,14 +705,22 @@ background: var(--accent-color);
 border: 1px solid var(--accent-color);
 border-radius: 4px;
 margin-left: 24px;
-flex-direction: row;
 justify-content: center;
 align-items: center;
 gap: 16px;
+
+transition-property: background-color;
+transition-duration: var(--main-duration);
+transition-timing-function: var(--main-timing-function);
 }
 .container-email-button {
 display: flex;
 }
+.button-subscribe:hover,
+.button-subscribe:focus {
+ background-color: var(--secondary-accent-color);   
+}
+
 /* ===================MODAL-WINDOW======================== */
 
 .form-in-modal {
@@ -755,7 +765,6 @@ position: relative;
 .icon {
 position: absolute;
 left: 16px;
-padding-right: 4px;
 display: inline-block;
 fill: var(--main-title-color);
 
@@ -775,11 +784,9 @@ top: 8px;
 .input-modal-box {
 width: 100%;
 height: 40px;
-border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px; 
 background-color: transparent;
-padding-left: 30px;
-border: 1px solid rgba(33, 33, 33, 0.2);
+padding-left: 38px;
 font-size: 16px;
 
 transition-property: border;
@@ -793,6 +800,7 @@ transition-timing-function: var(--main-timing-function);
 .textarea-box:focus {
 border: 1px solid var(--accent-color);
 }
+
 .input-modal-box:hover + .icon {
 fill: var(--accent-color);
 }
@@ -805,13 +813,16 @@ textarea {
 font-size: 12px;
 line-height: 1.33;
 letter-spacing: 0.04em;
-color: rgba(117, 117, 117, 0.5);
 resize: none;
 width: 100%;
 height: 120px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 padding: 8px 16px;
+}
+
+textarea::placeholder {
+ color: rgba(117, 117, 117, 0.5);    
 }
 
 .button-send {
@@ -830,14 +841,16 @@ margin-right: auto;
 margin-left: auto;
 cursor: pointer;
 border: none;
+
+transition-property: background-color;
+transition-duration: var(--main-duration);
+transition-timing-function: var(--main-timing-function);
 }
 
-/* .button-main {
-    
-    transition-property: background-color;
-    transition-duration: var(--main-duration);
-    transition-timing-function: var(--main-timing-function);
-} */
+.button-send:hover,
+.button-send:focus {
+background-color: var(--secondary-accent-color);
+}
 
 .button-main:is(:hover, :focus) {
     background-color: var(--secondary-accent-color);

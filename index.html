@@ -545,8 +545,8 @@
         </div>
 
         <form class="form" action="" autocomplete="on" novalidate>
-          <label for="user-email">
-            <span class="subscribe social-media">Subscribe</span>
+          <label class="user-email" for="user-email">
+            <span class="social-media">Subscribe</span>
           </label>
           <div class="container-email-button">
             <input
@@ -577,37 +577,52 @@
 
         <form class="form-in-modal" action="" autocomplete="on">
           <p>Leave your contacts and we will call you back</p>
-          <label class="label-list" for="">
+          <label class="label-list" for="name">
             <span class="label-modal-text">Name</span>
             <span class="input-wrap">
-              <input class="input-modal-box" type="name" name="name" />
+              <input
+                class="input-modal-box"
+                type="text"
+                name="name"
+                id="name"
+              />
               <svg class="icon icon-person" width="18" height="18">
                 <use href="./images/sprite-new.svg#icon-person"></use>
               </svg>
             </span>
           </label>
 
-          <label class="label-list" for="">
+          <label class="label-list" for="phone">
             <span class="label-modal-text">Phone</span>
             <span class="input-wrap">
-              <input class="input-modal-box" type="name" name="name" />
+              <input
+                class="input-modal-box"
+                type="tel"
+                name="name"
+                id="phone"
+              />
               <svg class="icon icon-phone-email" width="18" height="24">
                 <use href="./images/sprite-new.svg#icon-phone"></use>
               </svg>
             </span>
           </label>
 
-          <label class="label-list" for="">
+          <label class="label-list" for="email">
             <span class="label-modal-text">Email</span>
             <span class="input-wrap">
-              <input class="input-modal-box" type="name" name="name" />
+              <input
+                class="input-modal-box"
+                type="email"
+                name="name"
+                id="email"
+              />
               <svg class="icon icon-phone-email" width="18" height="24">
                 <use href="./images/sprite-new.svg#icon-email"></use>
               </svg>
             </span>
           </label>
 
-          <label class="label-list-textarea" for="">
+          <label class="label-list-textarea" for="comment">
             <span class="label-modal-text">Comment</span>
 
             <span class="input-wrap">
@@ -615,6 +630,7 @@
                 class="textarea-box"
                 name="Comment"
                 placeholder="Text input"
+                id="comment"
               ></textarea>
             </span>
           </label>
