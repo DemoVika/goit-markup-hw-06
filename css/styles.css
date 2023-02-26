@@ -189,12 +189,13 @@ left: 50%;
 transform: translate(-50%, -50%) scale(1);
 width: 408px;
 height: 584px;
+padding: 72px 24px 24px 24px;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 background-color: rgba(252, 252, 252, 1);
 opacity: 1;
 
-transition-property: transform opacity;
+transition-property: transform, opacity;
 transition-duration: var(--main-duration);
 transition-timing-function: var(--main-timing-function);
 }
@@ -723,13 +724,6 @@ display: flex;
 
 /* ===================MODAL-WINDOW======================== */
 
-.form-in-modal {
-position: absolute;
-top: 72px;
-right: 24px;
-left: 24px;
-bottom: 24px;
-}
 
 .form-in-modal > label {
 display: flex;
@@ -765,6 +759,8 @@ position: relative;
 .icon {
 position: absolute;
 left: 16px;
+top: 50%;
+transform: translateY(-50%);
 display: inline-block;
 fill: var(--main-title-color);
 
@@ -773,19 +769,12 @@ transition-duration: var(--main-duration);
 transition-timing-function: var(--main-timing-function);
 }
 
-.icon-person {
-top: 11px;
-}
-
-.icon-phone-email {
-top: 8px;
-}
-
 .input-modal-box {
 width: 100%;
 height: 40px;
 border-radius: 4px; 
 background-color: transparent;
+border: 1px solid rgba(33, 33, 33, 0.2);
 padding-left: 38px;
 font-size: 16px;
 
@@ -794,14 +783,13 @@ transition-duration: var(--main-duration);
 transition-timing-function: var(--main-timing-function);
 }
 
-.input-modal-box:hover,
 .input-modal-box:focus,
-.textarea-box:hover,
 .textarea-box:focus {
 border: 1px solid var(--accent-color);
+outline: none;
 }
 
-.input-modal-box:hover + .icon {
+.input-modal-box:focus + .icon {
 fill: var(--accent-color);
 }
 
@@ -873,15 +861,13 @@ padding-left: 24px;
 }
 
 .check-text::before {
-    
     position: absolute;
     content: "";
     width: 16px;
     height: 16px;
     border: 1.25px solid var(--main-title-color);
     border-radius: 2px;
-    left: 0;
-    
+    left: 0;   
 }
 
 .input-check:checked + .check-text::before {
